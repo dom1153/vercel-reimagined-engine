@@ -5,13 +5,20 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "pull": "vercel env pull .env",
+    "link": "vercel link",
+    "dbpush": "prisma db push",
+    "studio": "prisma studio",
+    "generate": "prisma generate"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@prisma/client": "^5.16.1",
     "next": "12.0.10",
+    "prisma": "^5.16.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-markdown": "8.0.0"
@@ -19,6 +26,7 @@
   "devDependencies": {
     "@types/node": "17.0.14",
     "@types/react": "17.0.38",
-    "typescript": "4.5.5"
+    "typescript": "4.5.5",
+    "vercel": "^34.2.8"
   }
 }

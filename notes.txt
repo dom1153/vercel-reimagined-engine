@@ -1,0 +1,26 @@
+Commands:
+
+npm run ""
+    "pull": "vercel env pull .env",
+    "link": "vercel link",
+    "dbpush": "prisma db push"
+    "studio": "prisma studio"
+
+on nixos, "dbpush" does not work via npm
+Instead we will use global 'prisma' calls with nix flake
+
+Also we can ignore this error:
+[Error: ENOENT: no such file or directory, mkdir '/nix/store/63nknxja8gpbkc62m045dh8k4h661079-prisma-5.6.0/lib/node_modules/prisma/engines'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'mkdir',
+  path: '/nix/store/63nknxja8gpbkc62m045dh8k4h661079-prisma-5.6.0/lib/node_modules/prisma/engines'
+}
+prisma db push and prisma studio continue fine despite the error
+
+prisma studio works fine (nixos, or npm)
+prisma generate works ok
+prisma db run does NOT work (RPC error: invalid param map)
+                             ^^^ https://github.com/prisma/prisma/issues/24644
+
+
