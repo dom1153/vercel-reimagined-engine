@@ -23,4 +23,4 @@ prisma generate works ok
 prisma db run does NOT work (RPC error: invalid param map)
                              ^^^ https://github.com/prisma/prisma/issues/24644
 
-
+Run `npm run build` before deploying

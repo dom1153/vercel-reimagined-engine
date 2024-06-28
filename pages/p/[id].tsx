@@ -3,6 +3,7 @@ import { GetServerSideProps } from "next";
 import ReactMarkdown from "react-markdown";
 import Layout from "../../components/Layout";
 import { PostProps } from "../../components/Post";
+import prisma from "../../lib/prisma";
 
 // false -> use hardcoded value
 let usePrisma: boolean = true;

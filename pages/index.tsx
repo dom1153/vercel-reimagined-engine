@@ -2,7 +2,7 @@ import React from "react";
 import { GetStaticProps } from "next";
 import Layout from "../components/Layout";
 import Post, { PostProps } from "../components/Post";
-import prisma from "../lib/prisma.ts";
+import prisma from "../lib/prisma";
 
 // false -> use hardcoded value
 let usePrisma: boolean = true;
